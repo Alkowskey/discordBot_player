@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx pm2 start index.js --watch"
+    "start": "node index.js --start"
   },
   "author": "",
   "license": "ISC",
