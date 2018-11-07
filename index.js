@@ -18,7 +18,7 @@ app.use(session({secret:config.secret, resave: false, saveUninitialized: false})
 app.set("view enginge","pug");
 app.use(express.static(__dirname + '/public'));
 
-const server = app.listen(7000, () => {
+const server = app.listen(process.env.PORT || 8080, () => {
     console.log(`Express running → PORT ${server.address().port}`);
     var args = process.argv.slice(2);
     if(args.includes('--start')||args.includes('-s')){
