@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        script(src="scripts/script.js")
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light d-flex justify-content-between">
+            <a class="navbar-brand d-flex" href="/">
+                <img src="../img/logo.png" width="30" height="30" class="align-top" alt="">
+                <h4 class="ml-3">#{name}</h4>
+            </a>
+            if isLogged
+                h4(class="mr-3 text-success") Bot is Logged
+            else
+                h4(class="mr-3 text-danger") Bot is not Logged
+        </nav>
+
+        <section class="col-sm">
+            <form action="play" method="get">
+                <div class="form-group">
+                    <label for="link">Link</label>
+                    <input type="text" class="form-control" id="link" name="link" aria-describedby="YT Link" placeholder="YT Link">
+                    <small id="emailHelp" class="form-text text-muted">Link to youtube song.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="channel">Voice Channels</label>
+                    <select class="custom-select" name="channel" id="channel">
+                        each val in channels
+                            option= val
+                    </select> 
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-primary">Play</button>
+                </div>
+            </form>
+            <div class="text-center mb-3">
+                <a href="/skip" class="btn btn-primary btn-lg">Skip</a>
+                <a href="/queue" class="btn btn-primary btn-lg">Queue</a>
+                <a href="/config" class="btn btn-primary btn-lg">Config</a>
+                <a href="/logout" class="btn btn-primary btn-lg">Logout</a>
+            </div>
+
+            <a href="/start" class="btn btn-primary btn-lg btn-block">Start</a>
+            <a href="/stop" class="btn btn-light btn-lg btn-block">Stop</a>
+        </section>
+    </body>
+</html>

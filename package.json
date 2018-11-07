@@ -1,0 +1,35 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx pm2 start index.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "bcryptjs": "*",
+    "body-parser": "~1.15.2",
+    "cancan": "^3.1.0",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "discord.js": "^11.4.2",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.4",
+    "express-session": "~1.14.1",
+    "express-toastr": "^2.0.2",
+    "ffmpeg-binaries": "^4.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "~4.13.1",
+    "morgan": "^1.9.1",
+    "opusscript": "0.0.6",
+    "passport": "~0.3.2",
+    "passport-local": "~1.0.0",
+    "pm2": "^3.2.2",
+    "pug": "^2.0.3",
+    "ytdl-core": "^0.26.3"
+  }
+}

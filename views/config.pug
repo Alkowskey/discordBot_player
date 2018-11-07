@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        script(src="scripts/script.js")
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light d-flex justify-content-between">
+            <a class="navbar-brand d-flex" href="/">
+                <img src="../img/logo.png" width="30" height="30" class="align-top" alt="">
+                <h4 class="ml-3">#{name}</h4>
+            </a>
+            if isLogged
+                h4(class="mr-3 text-success") Bot is Logged
+            else
+                h4(class="mr-3 text-danger") Bot is not Logged
+        </nav>
+
+        <section class="col-sm">
+            <form action="save" method="get">
+
+                <div class="form-group">
+                    <label for="token">Discord token</label>
+                    <input type="text" class="form-control" id="token" name="token" aria-describedby="tokenHelp" placeholder="Token" value="#{Token}">
+                    <small id="tokenHelp" class="form-text text-muted">Discord developer token</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Bot name</label>
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="Name" placeholder="Name" value="#{Name}">
+                    <small id="nameHelp" class="form-text text-muted">Name that will be displayed after bot connects</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="channId">Channel id</label>
+                    <input type="text" class="form-control" id="channId" name="channId" aria-describedby="channIdHelp" placeholder="channId" value="#{channId}">
+                    <small id="channidHelp" class="form-text text-muted">Default channel id</small>
+                </div>
+                <div class="form-group">
+                    <label for="prefix">Prefix</label>
+                    <input type="text" class="form-control" id="prefix" name="prefix" aria-describedby="prefix" placeholder="prefix" value="#{prefix}">
+                    <small id="channidHelp" class="form-text text-muted">Prefix used to decide if message is command</small>
+                </div>
+                <div class="form-group">
+                    <label for="secret">Session secret</label>
+                    <input type="text" class="form-control" id="secret" name="secret" aria-describedby="secretHelp" placeholder="Session secret" value="#{secret}">
+                    <small id="secretHelp" class="form-text text-muted">Session secret code that will keep your session safe</small>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-primary">Save</button>
+                </div>
+            </form>
+            <div class="text-center">
+                <a href="/" class="btn btn-lg btn-primary">Back</a>
+            </div>
+        </section>
+    </body>
+</html>
