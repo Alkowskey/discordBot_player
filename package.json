@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^5.0.0",
     "bcryptjs": "*",
     "body-parser": "~1.15.2",
     "cancan": "^3.1.0",
