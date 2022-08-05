@@ -23,7 +23,7 @@
     "express-toastr": "^2.0.2",
     "ffmpeg-binaries": "^4.0.0",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "~4.13.1",
+    "mongoose": "~5.7.5",
     "morgan": "^1.9.1",
     "opusscript": "0.0.6",
     "passport": "~0.3.2",
